@@ -2,10 +2,10 @@
 
 (defparameter *big* 100)
 
-(defparameter *prev_guess* 'nil)
+(defparameter *prev_guess* nil)
 
 (defun guess-my-number ()
-(if (or (<= (- *small* *big*) 2) (<= (- *big* *small*) 2))
+(if (or (<= (- *small* *big*) 2)(<= (- *big* *small*) 2))
     'nil
     (setf *prev_guess* (ash (+ *small* *big*) -1))))
 
@@ -20,4 +20,4 @@
 (defun reset ()
 (setf *big* 100)
 (setf *small* 1)
-(setf *prev-guess* 'nil))
+(setf *prev-guess* nil))

@@ -5,9 +5,9 @@
 (defparameter *prev_guess* 'nil)
 
 (defun guess-my-number ()
-(if (or (<= (- *small* *big*) 2) (<= (- *big* *small*) 2))
+(if (<= (- *small* *big*) 2)
     'nil
-    (setf *prev_guess* (ash (+ *small* *big*) -1))))
+(setf *prev_guess* (ash (+ *small* *big*) -1))))
 
 (defun bigger ()
 (setf *small* (1+ *prev_guess*))
